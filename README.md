@@ -10,7 +10,8 @@ This package is a simple platform specific actionSheet for Cupertino and Android
 - hasArrow - Not visible on IOS, indicating more options will appear
 - isCancel
 - defaultAction
-
+-  colortrailingIcon: -icon color,
+- trailingIcon - icon behind the Text
 
 ## Getting started
 In the pubspec.yaml of your flutter project, add the following dependency:
@@ -29,7 +30,7 @@ import 'package:platform_action_sheet/platform_action_sheet.dart';
 For help getting started with Flutter, view the [online documentation](https://flutter.io/).
 
 ## Example
-![](https://github.com/Amazing-Aidan/platform_action_sheet/blob/master/art/android.png?raw=true)
+![](https://github.com/tarektaamali/platform_action_sheet/blob/master/art/android.png?raw=true)
 
 
 ```dart
