@@ -69,6 +69,7 @@ ListTile _listTileFromAction(ActionSheetAction action) => action.hasArrow
               fontWeight:
                   action.defaultAction ? FontWeight.bold : FontWeight.normal),
         ),
+        trailing: Icon(action.trailingIcon,color: action.colortrailingIcon) ,
         onTap: action.onPressed,
       );
 
@@ -114,9 +115,12 @@ void _settingModalBottomSheet(
 class ActionSheetAction {
   /// Text to display
   final String text;
-
+  
+  final IconData trailingIcon;
   /// The function which will be called when the action is pressed
   final VoidCallback onPressed;
+  
+  final Color colortrailingIcon;
 
   /// Is this a default action - especially for iOS
   final bool defaultAction;
@@ -134,5 +138,7 @@ class ActionSheetAction {
     this.defaultAction = false,
     this.isCancel = false,
     this.hasArrow = false,
+    @required this.trailingIcon,
+    this.colortrailingIcon= Colors.blueAccent
   });
 }
